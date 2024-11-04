@@ -3,6 +3,7 @@ import { LiaCookieBiteSolid } from "react-icons/lia";
 import { RxCross2 } from "react-icons/rx";
 
 import { useState } from "react";
+import AcceptButton from "./AcceptButton";
 
 const CookieConsentPopup = () => {
   const [isCookieAccepted, setCookieAccepted] = useState(false);
@@ -25,14 +26,7 @@ const CookieConsentPopup = () => {
         </div>
         <div className="grid gap-4">
           <p className="text-white dark:text-black">We use cookies to improve your user experience.</p>
-          <button
-            className="bg-white dark:bg-black px-8 py-1 rounded-lg"
-            onClick={() => {
-              setCookieAccepted(!isCookieAccepted);
-            }}
-          >
-            <span className="text-black dark:text-white">I like Cookies!</span>
-          </button>
+          <AcceptButton isCookieAccepted={isCookieAccepted} setCookieAccepted={setCookieAccepted} />
         </div>
       </section>
     )

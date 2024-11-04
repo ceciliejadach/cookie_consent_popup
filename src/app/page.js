@@ -5,7 +5,7 @@ export default function Home() {
   const cookieIsAccepted = true;
 
   return (
-    <div className="grid justify-end h-screen px-8 py-8">
+    <div className="grid justify-end h-screen px-8 py-8 ">
       <If condition={cookieIsAccepted}>
         <CookieConsentPopup />
       </If>
